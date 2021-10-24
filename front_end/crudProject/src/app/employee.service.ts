@@ -20,4 +20,12 @@ export class EmployeeService {
   createEmployee(e: Employee): Observable<any> {
     return this.httpClient.post(this.url, e);
   }
+
+  getEmployeeById(id: number): Observable<Employee> {
+    return this.httpClient.get<Employee>(`${this.url}/${id}`);
+  }
+
+  updateEmployeeById(id: number): Observable<any> {
+    return this.httpClient.put(this.url, id);
+  }
 }
