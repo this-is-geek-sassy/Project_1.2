@@ -1,0 +1,22 @@
+<br>
+<h5 class="col text-center">Let's update the employee!</h5>
+
+<div class="col-md-6">
+    <form action="" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="empNameFirst">First Name</label>
+            <input type="text" id="empNameFirst" class="form-control" [(ngModel)]="emp.firstName" name="firstName">
+        </div>
+        <div class="form-group">
+            <label for="empNameLast">Last Name</label>
+            <input type="text" id="empNameLast" class="form-control" [(ngModel)]="emp.lastName" name="lastName">
+        </div>
+        <div class="form-group">
+            <label for="emailId">Email</label>
+            <input type="email" id="emailId" class="form-control" [(ngModel)]="emp.emailId" name="emailId">
+        </div>
+        
+        <button type="submit" class="btn btn-success">Submit</button>
+        
+    </form>
+</div>
