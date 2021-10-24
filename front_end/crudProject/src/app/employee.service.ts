@@ -16,4 +16,8 @@ export class EmployeeService {
     // Ajax call
     return this.httpClient.get<Employee[]>(this.url);
   }
+
+  createEmployee(e: Employee): Observable<any> {
+    return this.httpClient.post(this.url, e);
+  }
 }
