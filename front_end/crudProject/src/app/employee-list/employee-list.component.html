@@ -16,7 +16,10 @@
             <td>{{emp.firstName}}</td>
             <td>{{emp.lastName}}</td>
             <td>{{emp.emailId}}</td>
-            <td><button mat-button class="btn btn-dark" (click)="onUpdate(emp.id)">Update</button></td>
+            <td>
+                <button mat-button class="btn btn-dark" (click)="onUpdate(emp.id)">Update</button>
+                <button mat-button class="btn btn-danger" (click)="onDelete(emp.id)">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
