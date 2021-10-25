@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import com.example.springbootbackend.exception.ResourceNotFoundException;
 import com.example.springbootbackend.model.Employee;
 import com.example.springbootbackend.repository.EmployeeRepository;
 
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {
@@ -54,8 +56,8 @@ public class EmployeeController {
 		
 		Employee employee = employeeRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id:" +id));
-		employee.setFirstname(employeeDetails.getFirstname());
-		employee.setLastname(employeeDetails.getLastname());
+		employee.setFirstName(employeeDetails.getFirstName());
+		employee.setLastName(employeeDetails.getLastName());
 		employee.setEmailId(employeeDetails.getEmailId());
 		
 		Employee updatedEmployee = employeeRepository.save(employee);

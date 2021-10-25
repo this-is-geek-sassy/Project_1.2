@@ -15,20 +15,20 @@ export class EmployeeListComponent implements OnInit {
   constructor(private employee_service: EmployeeService, private router: Router) { }
 
   ngOnInit(): void {
-    this.employeeList = [
-      {
-        "id": 1,
-        "firstName": 'Ramesh',
-        "lastName": 'Dubey',
-        "emailId": 'ramesh.5star@cadbury.com'
-      },
-      {
-        "id": 2,
-        "firstName": 'Suresh',
-        "lastName": 'Dubey',
-        "emailId": 'suresh.5star@cadbury.com'
-      }
-    ]
+    // this.employeeList = [
+    //   {
+    //     "id": 1,
+    //     "firstName": 'Ramesh',
+    //     "lastName": 'Dubey',
+    //     "emailId": 'ramesh.5star@cadbury.com'
+    //   },
+    //   {
+    //     "id": 2,
+    //     "firstName": 'Suresh',
+    //     "lastName": 'Dubey',
+    //     "emailId": 'suresh.5star@cadbury.com'
+    //   }
+    // ]
     this.employee_service.getEmployeeList().subscribe(employees => {
       this.employeeList = employees;
     })

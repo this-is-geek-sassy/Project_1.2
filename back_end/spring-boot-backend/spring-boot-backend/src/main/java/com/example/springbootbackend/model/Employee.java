@@ -11,48 +11,60 @@ public class Employee {
 	private long id;
 	
 	@Column(name = "first_name")
-	private String firstname;
+	private String firstName;
 	
 	@Column(name = "last_name")
-	private String lastname;
+	private String lastName;
 	
 	@Column(name = "email_id")
 	private String emailId;
-	
-	public  Employee () {
-		
-	}
 
-	public Employee(String firstname, String lastname, String emailId) {
-		super();
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.emailId = emailId;
-	}
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getFirstname() {
-		return firstname;
+
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLastname() {
-		return lastname;
+
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+
 	public String getEmailId() {
 		return emailId;
 	}
+
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
+
+	public Employee(long id, String firstName, String lastName, String emailId) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
+	}
+
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	
 
 }

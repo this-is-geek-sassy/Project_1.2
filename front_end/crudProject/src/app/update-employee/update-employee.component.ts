@@ -22,7 +22,7 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   onSubmit() {
-    this.employee_serv.updateEmployeeById(this.id).subscribe(message => {
+    this.employee_serv.updateEmployeeById(this.id, this.emp).subscribe(message => {
       alert(message);
       this.router.navigate(['/employees']);
     })
